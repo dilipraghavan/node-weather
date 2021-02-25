@@ -5,6 +5,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 
 //Set iew engine as HBS.
@@ -91,7 +92,7 @@ app.get('*',(req,res) =>{
 });
 
 
-app.listen(3000, () =>{
+app.listen(port, () =>{
     console.log('App started at port 3000');
 }
 );
