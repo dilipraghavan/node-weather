@@ -11,7 +11,8 @@ const weather = (long, lat, callback) =>{
             callback('Location does not exist');
         }else{
             callback(undefined, {
-                temparature: response.body.current.temperature
+                temparature: response.body.current.temperature,
+                feelsLike: response.body.current.feelslike
             }
             );
         }
